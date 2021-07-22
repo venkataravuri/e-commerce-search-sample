@@ -16,6 +16,8 @@ kubectl apply -f https://download.elastic.co/downloads/eck/1.6.0/all-in-one.yaml
 Monitor the operator logs
 kubectl -n elastic-system logs -f statefulset.apps/elastic-operator
 
+kubectl apply -f elasticsearch.yaml
+
 More details refer to, https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-deploy-eck.html
 
 
