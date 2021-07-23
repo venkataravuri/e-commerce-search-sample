@@ -12,14 +12,14 @@ brew install helm
 
 ### Setup Elastic Cloud for Kubernetes (ECK) and Elastic Stack
 
-Install custom resource definitions and the operator with its RBAC rules:
-kubectl apply -f https://download.elastic.co/downloads/eck/1.6.0/all-in-one.yaml
+Installing ECK using helm chart
+```sh
+helm repo add elastic https://helm.elastic.co
+helm repo update
+```
 
-Monitor the operator logs
-kubectl -n elastic-system logs -f statefulset.apps/elastic-operator
+helm install elasticsearch elastic/elasticsearch --set replicas=1,minimumMasterNodes=1
+kubectl port-forward svc/elasticsearch-master 9200
 
-kubectl apply -f elasticsearch.yaml
-
-More details refer to, https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-deploy-eck.html
 
 
