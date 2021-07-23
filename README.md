@@ -7,6 +7,8 @@ You will build working end-to-end e-commerce solution with more focus on 'Search
 ### Setup Kubernentes enviornment
 Follow below instructions to setup Minikube on your machine (Windows/Mac),
 
+brew install helm
+
 
 ### Setup Elastic Cloud for Kubernetes (ECK) and Elastic Stack
 
