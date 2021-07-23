@@ -55,5 +55,8 @@ https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-enterprise-search-quick
 kubectl port-forward service/enterprise-search-quickstart-ent-http 3002
 Open https://localhost:3002 in your browser.
 
+Login as the elastic user created with the Elasticsearch cluster. Its password can be obtained with:
+
+kubectl get secret quickstart-es-elastic-user -o=jsonpath='{.data.elastic}' | base64 --decode; echo
 
 
